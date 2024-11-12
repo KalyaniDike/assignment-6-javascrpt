@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox and Paragraph Interaction</title>
+</head>
+<body>
+
+    <!-- Textbox with ID txt -->
+    <input type="text" id="txt" placeholder="Enter some text here">
+
+    <!-- Paragraph with ID para -->
+    <p id="para">Your text will appear here.</p>
+
+    <script>
+        // Function to update the paragraph when the textbox value is clicked
+        document.getElementById("txt").onclick = function() {
+            // Get the value from the textbox
+            var textboxValue = document.getElementById("txt").value;
+            
+            // Display the value inside the paragraph using innerText
+            document.getElementById("para").innerText = "You entered: " + textboxValue;
+        };
+    </script>
+
+</body>
+</html>
